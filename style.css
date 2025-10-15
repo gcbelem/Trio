@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=autorenew,delete,event,favorite,lightbulb_2,menu,open_in_new,schedule,search,sell");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --heading-font: 'Source Sans 3';
+    --text-font: 'Source Sans 3';
+
+    --header-background-color: white;
+    --main-background-color: #F5E0C3;
+    --card-background-color: white;
+    --detail-background-color: #F3F4F6;
+
+    --text-color: #1A1A1A;
+    --secondary-text-color: #555;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+body {
+    color: var(--text-color);
+    width: 100vw;
+    height: 100vh;
+    font-family: var(--text-font);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px;
+    border-bottom: 3px solid #212121;
+}
+
+h1 {
+    font-family: var(--heading-font);
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: --text-color;
+    font-weight: 100;
+    margin: auto;
+}
+
+button {
+    background-color: var(--detail-background-color);
+}
+
+.search-bar {
+    padding: 1rem;
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(3,30%);
+    justify-content: center;
+    gap: 10px;
+}
+
+#search-input {
+    grid-column: span 3;
+    height: 2rem;
+    padding: 0px 5px;
+}
+
+#search-input > button {
+    display: flex;
+    align-items: center;
+    font-family: var(--text-font);
+}
+
+#search-input > button > .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-size: 1rem;
+    padding-right: 5px;
+}
+
+#media-selection {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 25px;
+    gap: 35px;
+}
+
+.display-media {
+    margin: auto;
+    width: 300px;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 0px 10px;
+    letter-spacing: .025rem;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis; /*review*/
+}
+
+.media-year {
+    color: var(--secondary-text-color);
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: smaller;
+}
+
+.media-card {
+    display: flex;
+    flex-flow: row;
+    height: 300px;
+    margin: 10px;
+    gap: 5px;
+}
+
+.media-image {
+    margin: auto;
+    height: 300px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.media-buttons {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.media-buttons > button {
+    margin: auto;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+}
+
+.media-buttons > button > .material-symbols-outlined {
+    font-size: 2rem;
+    font-variation-settings: 'wght' 300;
+}
+
+.media-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    font-size: smaller;
+}
+
+.media-time > .material-symbols-outlined, .media-label> .material-symbols-outlined{
+    font-variation-settings: 'FILL' 1;
+}
+
+.media-time, .media-label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#movie-time > #import-movie-time::after {
+    content: " minutes";
+}
+
+#book-time > #import-book-time::after {
+    content: " pages";
+}
+
+.media-overview {
+    font-size: .9rem;
+    background-color: var(--detail-background-color);
+}
+
+details {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: justify;
+}
+
+summary {
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 1.1rem;
+    letter-spacing: .025rem;
+}
